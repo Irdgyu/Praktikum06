@@ -5,7 +5,7 @@ public class Pemilihan2Percobaan206 {
     public static void main(String[] args) {
         Scanner input6 = new Scanner(System.in);
 
-        String member;
+        String member, metodePembayaran;
         int jumlahBeli, menu;
         double diskon, harga, totalBayar;
 
@@ -21,6 +21,8 @@ public class Pemilihan2Percobaan206 {
         input6.nextLine();
         System.out.println("Apakah anda punya member? (ya/tidak) = ");
         member = input6.nextLine();
+        System.out.println("Masukkan metode pembayaran? (qris) = ");
+        metodePembayaran = input6.nextLine();
         System.out.println("-----------------------------------------");
 
         if (member.equalsIgnoreCase("ya")) {
@@ -44,7 +46,16 @@ public class Pemilihan2Percobaan206 {
             }
 
             totalBayar = harga - (harga * diskon);
-            System.out.println("Total pembayaran setelah diskon = " + totalBayar);
+            
+            if (metodePembayaran.equalsIgnoreCase("qris")) {
+                System.out.println("Total pembayaran setelah diskon = " + totalBayar);
+                totalBayar -= 1000;
+                System.out.println("Total bayar memakai qris = " + totalBayar);
+            }
+            else {
+                System.out.println("Total pembayaran setelah diskon = " + totalBayar);
+            }
+
         }
         
         else if (member.equalsIgnoreCase("tidak")) {
@@ -64,10 +75,16 @@ public class Pemilihan2Percobaan206 {
                 System.out.println("Masukkan menu dengan benar");
                 return;
             }
-            
-            System.out.println("Total pembayaran = " + harga);
+            if (metodePembayaran.equalsIgnoreCase("qris")) {
+                System.out.println("Total pembayaran = " + harga);
+                harga -= 1000;
+                System.out.println("Total bayar memakai qris = " + harga);
+            }
+            else {
+                System.out.println("Total pembayaran = " + harga);
+            }
         } else {
-            System.out.println("Mmeber tidak valid");
+            System.out.println("Member tidak valid");
         }
         System.out.println("-----------------------------------------");  
     }
