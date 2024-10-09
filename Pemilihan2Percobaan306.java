@@ -20,9 +20,9 @@ public class Pemilihan2Percobaan306 {
                 pajak = 0.15;
             }else {
                 pajak = 0.2;
+            }
             gajiBersih = (int) (penghasilan - (pajak * penghasilan));
             System.out.print("Penghasil Bersih : " + gajiBersih);
-            }
 
         }
         else if (kategori.equalsIgnoreCase("pebisnis")) {
@@ -32,9 +32,9 @@ public class Pemilihan2Percobaan306 {
                 pajak = 0.2;
             }else {
                 pajak = 0.25;
+            }
             gajiBersih = (int) (penghasilan - (pajak * penghasilan));
             System.out.print("Penghasil Bersih : " + gajiBersih);
-            }
         }
         else {
             System.out.println("Masukkan Kategori Salah : ");
