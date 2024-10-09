@@ -37,7 +37,7 @@ public class Pemilihan2Percobaan306 {
             }
         }
         else {
-            System.out.print("Masukkan Kategori Salah : ");
+            System.out.println("Masukkan Kategori Salah : ");
         }
     }
 }
